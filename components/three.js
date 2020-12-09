@@ -43,6 +43,7 @@ const FBX = ({click}) => {
           onPointerOut={e => setHover(false)}
         >
         </mesh>
+        
     
       )
   }
