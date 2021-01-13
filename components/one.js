@@ -5,25 +5,27 @@ import { useFBX } from '@react-three/drei/useFBX'
 
 
 
-const FBX = ({click}) => {
+const FBX = ({number}) => {
 
   
     const mesh = useRef()
-    let fbx = useFBX(`/models/${1}.fbx`)
+    let fbx = useFBX(`/models/${number}.fbx`)
     const { 
       gl,             
       canvas,              
     } = useThree()
 
     const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
+
 
     useFrame(() => {
-      // if(hovered){
-     
-        // mesh.current.rotation.x += 0.01
-        mesh.current.rotation.y += 0.01
-     
+        mesh.current.rotation.y += 0.01   
+        if(hovered){
+          mesh.current.rotation.x = 0;
+          mesh.current.rotation.y = 0;
+          mesh.current.rotation.z = 0;
+        }
+
     })
 
    
@@ -34,11 +36,10 @@ const FBX = ({click}) => {
           <mesh
           {...fbx.children[0]}
           ref={mesh}
-          position={[0, 0, 6]}
+          position={[0, 0, 4]}
           scale={[0.12,0.12,0.12]}
           name="Object_0"
           rotation={[0, 0, 0]}
-          onClick={e=>click()}
           onPointerOver={e => setHover(true)}
           onPointerOut={e => setHover(false)}
         >
@@ -49,13 +50,13 @@ const FBX = ({click}) => {
 
 
   
-  const One = ({clickOne}) => {
+  const One = ({number}) => {
 
 
 
     return (
       <Suspense callback={false}>
-          <FBX click={clickOne}/>
+          <FBX number={number}/>
         </Suspense>
     )
   }
