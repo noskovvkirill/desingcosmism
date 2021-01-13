@@ -92,7 +92,9 @@ const Index = () => {
    <div className='object-main'>
       <div className='object-text'>
        {descriptions[objectDisplay]}
-        {/* <div className='object-text-three'></div> */}
+        <div className='object-text-three'>
+        <OneContainer title={titles[objectDisplay]} number={objectDisplay} clickOne={NextObject}/>
+        </div>
       </div>
           <ResizableBox 
            resizeHandles={["w"]}
@@ -121,8 +123,15 @@ const Index = () => {
             <div className="footer">
               <Audio title={titles[objectDisplay]}/>
               <div className="card-footer">
-                <div style={{borderBottom:'1px dashed white', marginBottom:'16px'}}><h5>COSMIST FUTURISM</h5></div>
-                <div><h5>PRoject by Petra E & Kirill N</h5></div>
+                <div style={{borderBottom:'1px dashed white', marginBottom:'16px', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+                  <h5>COSMIST FUTURISM</h5>
+                  <h5>✺✺✺</h5>
+                  </div>
+                 
+                <div style={{display:'flex', flexDirection:'row',  justifyContent:'space-between'}}>
+                <h5>➢➢➢</h5><h5>PRoject by Petra E & Kirill N</h5>
+                 
+                </div>
               </div>
             </div>
        

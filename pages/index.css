@@ -234,6 +234,7 @@ main{
   width:100%;
   opacity:0.5;
   z-index:-1;
+  filter:blur(32px);
 }
 .object-text-three .three{
   height:100%;
@@ -277,7 +278,7 @@ main{
   align-items:center;
   justify-content:center;
   cursor:ns-resize;
-  height:24px;
+  max-height:24px;
   border-bottom:1px dashed white;
   transition:0.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -335,6 +336,7 @@ a {
   padding:16px;
   padding-bottom:32px;
   order:2;
+  backdrop-filter: blur(2px);
 }
 
 
@@ -345,6 +347,7 @@ a {
   height:fit-content;
   display:flex;
   flex-direction:column;
+  min-width:350px;
 }
 .card-footer, h5{
   margin:0;

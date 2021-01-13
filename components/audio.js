@@ -19,7 +19,7 @@ const AWSSoundPlayer = withCustomAudio(props => {
 
   return (
       <>
-      <h5 style={{marginBottom:'8px', border:'1px solid white', padding:'4px'}}>AUDIO: {trackTitle}</h5>
+      <h5 style={{marginBottom:'8px', border:'1px solid white', padding:'4px', width:'55%'}}>AUDIO: {trackTitle}</h5>
     <div className='player-container'>
       <PlayButton {...props} />
         <div style={{display:'flex', flexDirection:'column', marginLeft:'32px'}}>
