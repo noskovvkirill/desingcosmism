@@ -192,14 +192,19 @@ button{
 
 .object-main{
   width:100vw;
+  overflow:hidden;
   display:flex;
   flex-direction:row;
-  align-items:flex-end;
-  justify-content: flex-end;
+  align-items:flex-start;
+  justify-content: space-between;
+  border-bottom:1px dashed white;
 }
 .object-main-container{
   width:100vw;
+  max-height:85vh;
   display:flex;
+  /* overflow:hidden; */
+  align-items: stretch;
   flex-direction:column;
 }
 
@@ -216,9 +221,6 @@ main{
   overflow:scroll;
   font-size:24px;
   font-family:Helvetica;
-  height:auto;
-  max-height:85vh;
-  border-bottom:1px dashed white;
   padding:32px;
   padding-bottom:0px;
 }
@@ -326,6 +328,7 @@ a {
   display:flex;
   left:0px;
   bottom:0px;
+  min-height:300px;
   height:fit-content;
   justify-content: space-between;
   z-index:20;
@@ -339,6 +342,7 @@ a {
   padding:8px;
   border:1px solid white;
   border-radius:8px;
+  height:fit-content;
   display:flex;
   flex-direction:column;
 }
@@ -361,7 +365,7 @@ a {
 }
 
 .progressbar{
-  width:200px;
+  width:500px;
   height: 4px;
   background-color:white;
   border-radius:4px;

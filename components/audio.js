@@ -23,7 +23,7 @@ const AWSSoundPlayer = withCustomAudio(props => {
     <div className='player-container'>
       <PlayButton {...props} />
         <div style={{display:'flex', flexDirection:'column', marginLeft:'32px'}}>
-            <div className='player-progress-icon' style={{transform:`translateX(${(currentTime/duration)*200-16}px) translateY(-50%)`}}><Star/></div>
+            <div className='player-progress-icon' style={{transform:`translateX(${(currentTime/duration)*500-16}px) translateY(-50%)`}}><Star/></div>
             <Progress className={'progressbar'} innerClassName={'progressbar-inner'} value={(currentTime/duration)*100}/>
         </div>
     </div>

@@ -82,11 +82,11 @@ const Index = () => {
   return (
    <Layout>
     <main>
-    <ResizableBox resizeHandles={["nw"]}
+    <ResizableBox resizeHandles={["s"]}
            handle={HandleHorizontal}
            height={700} 
            axis={'y'}
-           minConstraints={[300, 256]} maxConstraints={[5000,5000]}
+           minConstraints={[300, 256]} maxConstraints={[2000,1200]}
            className='object-main-container'
           >
    <div className='object-main'>
@@ -121,7 +121,7 @@ const Index = () => {
             <div className="footer">
               <Audio title={titles[objectDisplay]}/>
               <div className="card-footer">
-                <div><h5>COSMIST FUTURISM</h5></div>
+                <div style={{borderBottom:'1px dashed white', marginBottom:'16px'}}><h5>COSMIST FUTURISM</h5></div>
                 <div><h5>PRoject by Petra E & Kirill N</h5></div>
               </div>
             </div>
